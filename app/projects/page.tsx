@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { getGitHubRepositories } from "@/lib/github";
+import { site } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Projects — Your Name", description: "Public GitHub repositories and open-source work by Your Name." };
+export const metadata: Metadata = { title: `Projects — ${site.name}`, description: `Public GitHub repositories and open-source work by ${site.name}.` };
 
 export default async function ProjectsPage() {
   const repositories = await getGitHubRepositories();

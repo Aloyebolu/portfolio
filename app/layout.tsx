@@ -3,14 +3,15 @@ import "./globals.css";
 import "./projects.css";
 import "./contact-form.css";
 import { Toaster } from "sonner";
+import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Your Name — Software Engineer",
-  description: "A portfolio for Your Name, an independent software engineer and thoughtful digital partner.",
-  metadataBase: new URL("https://example.com"),
+  title: `${site.name} — Software Engineer`,
+  description: site.intro,
+  // metadataBase: new URL("https://example.com"),
   openGraph: {
-    title: "Your Name — Software Engineer",
-    description: "Independent software engineering and digital product work.",
+    title: `${site.name} — Software Engineer`,
+    description: site.intro,
     type: "website",
   },
 };
